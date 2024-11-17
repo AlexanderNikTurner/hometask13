@@ -96,6 +96,7 @@ for i in range(len(SYMBOLS)):
 print(f'Подобранный ключ: расшифрованный текст\n{result_key}: {result_note}')
 print()
 
-new_crypt = CaesarsCipher()
-message2 = new_crypt.encrypt('The vacation was a success', 3)
-print(message2)
+path = input('Введите путь к файлу для записи:\n')
+with open(path, 'w', encoding='utf-8') as file:
+    file.write(f'Подобранный ключ: расшифрованный текст\n'
+               f'{result_key}: {result_note}')
